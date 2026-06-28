@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZUXO Player - Streaming Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🎬 ZUXO Player</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('planos')">Planos</a></li>
+            <li><a href="#" onclick="showPage('login')">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <div id="home" class="page active">
+        <div class="container">
+            <h1>🎬 ZUXO Player</h1>
+            <p>O melhor streaming de vídeos premium</p>
+            <button onclick="showPage('planos')">Ver Planos</button>
+        </div>
+    </div>
+
+    <!-- PLANOS -->
+    <div id="planos" class="page">
+        <div class="container">
+            <h1>Nossos Planos</h1>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h2>Basic</h2>
+                    <p class="price">R$ 19,90/mês</p>
+                    <ul>
+                        <li>✅ 100 filmes</li>
+                        <li>✅ SD (480p)</li>
+                        <li>✅ 1 tela</li>
+                    </ul>
+                    <button>Assinar</button>
+                </div>
+                <div class="plan-card featured">
+                    <h2>Premium</h2>
+                    <p class="price">R$ 34,90/mês</p>
+                    <ul>
+                        <li>✅ 1000 filmes</li>
+                        <li>✅ HD (1080p)</li>
+                        <li>✅ 4 telas</li>
+                    </ul>
+                    <button>Assinar</button>
+                </div>
+                <div class="plan-card">
+                    <h2>VIP</h2>
+                    <p class="price">R$ 49,90/mês</p>
+                    <ul>
+                        <li>✅ Tudo ilimitado</li>
+                        <li>✅ 4K + HDR</li>
+                        <li>✅ 6 telas</li>
+                    </ul>
+                    <button>Assinar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="login" class="page">
+        <div class="container login-container">
+            <h1>Login</h1>
+            <form onsubmit="fazerLogin(event)">
+                <input type="email" id="email" placeholder="Seu email" required>
+                <input type="password" id="senha" placeholder="Sua senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Não tem conta? <a href="#" onclick="showPage('registro')">Criar agora</a></p>
+        </div>
+    </div>
+
+    <!-- REGISTRO -->
+    <div id="registro" class="page">
+        <div class="container login-container">
+            <h1>Criar Conta</h1>
+            <form onsubmit="fazerRegistro(event)">
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <input type="email" id="emailReg" placeholder="Seu email" required>
+                <input type="password" id="senhaReg" placeholder="Sua senha" required>
+                <button type="submit">Criar Conta</button>
+            </form>
+            <p>Já tem conta? <a href="#" onclick="showPage('login')">Fazer login</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
